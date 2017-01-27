@@ -1,0 +1,10 @@
+framework module ApertainSDKiOS {
+  umbrella header "ApertainSDKiOS.h"
+
+  export *
+  module * { export * }
+}
+
+module ApertainSDKiOS.Swift {
+    header "ApertainSDKiOS-Swift.h"
+}
