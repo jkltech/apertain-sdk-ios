@@ -119,7 +119,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 #endif
 
-//#import <ApertainSDKiOS/ApertainSDKiOS.h>
+#import <ApertainSDKiOS/ApertainSDKiOS.h>
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
@@ -142,8 +142,8 @@ SWIFT_CLASS("_TtC14ApertainSDKiOS15ApertainFactory")
 @end
 
 
-//@interface FMDatabase (SWIFT_EXTENSION(ApertainSDKiOS))
-//@end
+@interface FMDatabase (SWIFT_EXTENSION(ApertainSDKiOS))
+@end
 
 @class NSBundle;
 @class NSCoder;
