@@ -139,6 +139,8 @@ SWIFT_CLASS("_TtC14ApertainSDKiOS15ApertainFactory")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)reachabilityCheck;
 - (nonnull instancetype)initWithAppUniqueId:(NSString * _Nonnull)appUniqueId userAppSignature:(NSString * _Nonnull)userAppSignature userName:(NSString * _Nonnull)userName userEmail:(NSString * _Nonnull)userEmail OBJC_DESIGNATED_INITIALIZER;
+- (NSString * _Nonnull)setUserDataWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
+- (NSString * _Nonnull)getUserDataWithKey:(NSString * _Nonnull)key;
 @end
 
 
