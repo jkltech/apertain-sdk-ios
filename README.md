@@ -77,11 +77,16 @@ As a developer you can place this view in any layout of your choice to let the u
 
 
 ### 3. A(P)ertain App Feedback Prompt
-Default Title: Give Your Valuable Feedback
+
+Default Title: Give Your Valuable Feedback.
+
 Default Message: What can we do to ensure that you love our app? We appreciate your constructive feedback.
-Title and Message passing empty 
+
+If Title and Message are passed empty in the API Call, the Default Title and Defaule Message would be used.
       
 	InAppController *obj = [[InAppController alloc] init];
     [obj showFeedbackAlertWithViewDelegate:self title:@"Feedback Prompt Title here (Optional)" message:@"Please provide your valuable feedback??"];
+	
 or
+
 	[obj showFeedbackAlertWithViewDelegate:self title:@"" message:@""];
