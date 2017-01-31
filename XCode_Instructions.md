@@ -1,31 +1,56 @@
-### 1. Integrating APertain SDK for iOS for XCode Swift 3.0
+### 1. Integrating APertain SDK for iOS Xcode (Swift 3.0 and Objetive-C)
 
-#### 1.1 Link with ApertainSDKiOS.framework(Drag and Drop) into your XCode Swift App Project 
+Integrating APertain SDK inside XCode for your App is pretty straight-forward. Please follow the below steps for a successful linking.
+
+## Step 1. Linking APertain SDK Framework
+
+Link with ApertainSDKiOS.framework(Drag and Drop) into your XCode (Swift Apps or Objective-C Apps)
+
 ![Image of Drag Drop of APertain SDK Framework inside XCode Swift App Project](./images/DragAndDrop.png)
 	
-#### 1.2 Then Project General Settings -> Embedded Binaries -> Click (+) and can you see popup Screen  ApertainSDKiOS.framework Select and Add to the App Project
+## Step 2. Embed APertain SDK Binaries
+
+Then Project General Settings -> Embedded Binaries -> Click (+) and can you see popup Screen  ApertainSDKiOS.framework Select and click Add button.
+
 ![Image of Adding APertain SDK iOS Embedded Binaries into the XCode Swift App Project](./images/EmbeddedBinaries.png)
 	
-#### 1.3 If you need copy of ApertainiOS.Framework or No need to copy only reference of your Project
+## Step 3. Reference of APertain SDK in App
+
+If you need copy of ApertainiOS.Framework or No need to copy only reference of your Swift Apps or Objective-C Apps. 
+
 ![Image of Adding APertain SDK iOS Copy or Reference into the XCode Swift App Project](./images/IfNeedCopy.png)
+
+#NOTE: It is recommended not to have a separate Copy within your App, as when you pull the latest from GitHub, you might need to repeat the above process again.
 	
-#### 1.4 Finally project General settings tab can see like this.
+## Step 4. Final Project Structure
+
+Finally project General settings tab can see like this both Swift Apps and Objective-C.
+
 ![Image of Adding APertain SDK iOS Final XCode Swift App Project](./images/FinalStage.png)
 	
-#### 1.5 import ApertainSDKiOS into your class.
+## Step 5. Importing APertain SDK in App
 
-### 2. Manual configuration Apertain iOS SDK for XCode Objective-C
-#### 1.1 Link with ApertainSDKiOS.framework(Drag and Drop) into your XCode Objective-C App Project 
+Just do import your App class for Swift
+
+	import ApertainSDKiOS
+
+For Objective-C you can import 
+
+	#import <ApertainSDKiOS/ApertainSDKiOS.h>
+
+## Step 6. Enabling Embedded Swift Standard in your Objective-C App.
+
+#Note: Only for Objective-C.
+
+Change Project Build Settings -> Build options -> Always embed Swift Standard Libraries -> Yes. See below Screen shot
+
+![Image of Adding APertain SDK iOS Embed Swift Standard Objective-C App Project](./images/EmbedBuildOption-ObjC.png)
+
 ![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/DragAndDrop-ObjC.png)
 
-#### 1.2 Then tab Project Genaral Settings -> Embedded Binaries -> click (+) and can you see that ApertainSDKiOS.framework click and add to project
 ![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/EmbeddedBinaries-ObjC.png)
 
-#### 1.3 If you need copy of ApertainiOS.Framework or No need to copy only reference of your Project
 ![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/IfNeedCopy-ObjC.png)
 
-#### 1.4 Finally project General settings tab can see like this.
 ![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/FinalStage-ObjC.png)
 
-#### 1.5 One more setting change Project Build Settings -> Build options -> Always embed Swift Standard Libraries -> Yes. See below Screen shot
-![Image of Adding APertain SDK iOS Embed Swift Standard Objective-C App Project](./images/EmbedBuildOption-ObjC.png)
