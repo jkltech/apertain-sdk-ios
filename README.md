@@ -22,7 +22,7 @@ The APertain SDK though written on Swift 3.0, can also be used on Objective-C Ap
 
 In your Swift App, in the Controller Code that loads your App write the following code in viewDidLoad() function. This should be called only once in your App/Game on the first Controller loaded by the App/Game.
 	
-The App Unique ID and User App Signature are generated when you add the App in ![APertain SaaS Console](https://www.apertain.com/login.apt). The App Unique IDs & User App Signature will identify the App and your Publisher Account registered with the APertain SaaS Console.
+The App Unique ID and User App Signature are generated when you add the App in [APertain SaaS Console](https://www.apertain.com/login.apt). The App Unique IDs & User App Signature will identify the App and your Publisher Account registered with the APertain SaaS Console.
 
 	Let _Init_Return =  ApertainFactory.init(appUniqueId: "XXXXXX", userAppSignature: 
 										"XXXXXXX", userName: "XYXY", userEmail: "XXXX@yyyyy.com");
@@ -31,7 +31,7 @@ The App Unique ID and User App Signature are generated when you add the App in !
 
 In your Objective-C App, in the Controller that loads your App write the following code in viewDidLoad() function. This should be called only once in your App/Game on the first Controller loaded by the App/Game.
 	
-The App Unique ID and User App Signature are generated when you add the App in ![APertain SaaS Console](https://www.apertain.com/login.apt). The App Unique IDs & User App Signature will identify the App and your Publisher Account registered with the APertain SaaS Console.
+The App Unique ID and User App Signature are generated when you add the App in [APertain SaaS Console](https://www.apertain.com/login.apt). The App Unique IDs & User App Signature will identify the App and your Publisher Account registered with the APertain SaaS Console.
 
 	 [[ApertainFactory alloc] initWithAppUniqueId:@"XXXXXX" userAppSignature:@"XXXXXXX"
 										userName:@"XYXY" userEmail:@"XXXXX@YYY.com"];
