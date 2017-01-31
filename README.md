@@ -31,7 +31,7 @@ The App Unique ID and User App Signature are generated when you add the App in !
 
 In your Objective-C App, in the Controller that loads your App write the following code in viewDidLoad() function. This should be called only once in your App/Game on the first Controller loaded by the App/Game.
 	
-The App Unique ID and User App Signature are generated when you add the App in [APertain SaaS Console](https://www.apertain.com/login.apt). The App Unique IDs & User App Signature will identify the App and your Publisher Account registered with the APertain SaaS Console.
+The App Unique ID and User App Signature are generated when you add the App in ![APertain SaaS Console](https://www.apertain.com/login.apt). The App Unique IDs & User App Signature will identify the App and your Publisher Account registered with the APertain SaaS Console.
 
 	 [[ApertainFactory alloc] initWithAppUniqueId:@"XXXXXX" userAppSignature:@"XXXXXXX"
 										userName:@"XYXY" userEmail:@"XXXXX@YYY.com"];
@@ -45,7 +45,8 @@ When the Rating Prompt shows up, it takes the user to rate your app in App Store
 ## 2.1. Smart Rating Prompt (Swift Apps)
 
 	 let ratingPrompt = APTRateApp();
-     ratingPrompt.initRateMyApp(viewDelegate: self, title: "Rating prompt Title here", message: "Rating prompt message here");
+     ratingPrompt.initRateMyApp(viewDelegate: self, title: "Rating prompt Title here",
+								message: "Rating prompt message here");
 
 ## 2.2. Smart Rating Prompt (Objective-C Apps)
 
