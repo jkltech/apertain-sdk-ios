@@ -1,14 +1,14 @@
-A(P)ertain SDK v0.9.0 for iOS - Getting Started (BETA)
+Apertain SDK v0.9.0 for iOS - Getting Started (BETA)
 ======================================================
 
-This document describes how to get started using the A(P)ertain SDK v0.9.0 for iOS. Our Library is built using Swift 3.0 and can also be used with Apps developed in Objective-C. You can see sample Apps uploaded as part of this project in near future.
+This document describes how to get started using the Apertain SDK v0.9.0 for iOS. Our Library is built using Swift 3.0 and can also be used with Apps developed in Objective-C. You can see sample Apps uploaded as part of this project in near future.
 
 Before you Begin
 ----------------
 
 Before implementing the SDK, make sure you have the following:
 
-* Download the A(P)ertain SDK framework from [here](https://github.com/jkltech/apertain-sdk-ios). The best way is to clone the Git Hub project, such that future updates for the SDK are integrated immediately.
+* Download the Apertain SDK framework from [here](https://github.com/jkltech/apertain-sdk-ios). The best way is to clone the Git Hub project, such that future updates for the SDK are integrated immediately.
 * Add the Framework into your Xcode App Project using the instructions over [here](https://github.com/jkltech/apertain-sdk-ios/blob/master/XCode_Instructions.md).
 
 Getting Started
@@ -51,12 +51,12 @@ When the Rating Prompt shows up, it takes the user to rate your app in App Store
 ## 2.2. Smart Rating Prompt (Objective-C Apps)
 
 	APTRateApp *rateApp = [[APTRateApp alloc] init];
-    [rateApp initRateMyAppWithViewDelegate:self title:@"A(P)ertain Title here"
+    [rateApp initRateMyAppWithViewDelegate:self title:@"Apertain Title here"
 								message:@"Rating prompt message here!!"];
 	
 ### 3. APertain In-App Support Chat Interface
 
-A(P)ertain App Support Chat Interface provides a means messenger style communication (conversation) interface for the user and the Mobile Developer. The below code provides a APertain Support icon view which when clicked will open up the In-App Support Chat Interface. 
+Apertain App Support Chat Interface provides a means messenger style communication (conversation) interface for the user and the Mobile Developer. The below code provides a APertain Support icon view which when clicked will open up the In-App Support Chat Interface. 
 
 As a developer you can place this view in any View of your choice to let the user open up the App Support Chat Interface with a customised title.
 
@@ -108,3 +108,66 @@ If Title and Message are passed empty in the API Call, the Default Title and Def
 or
 
 	[obj showFeedbackAlertWithViewDelegate:self title:@"" message:@""];
+
+
+### 5. Logging User Experience
+From within the App/Game, a user tends to experience various levels of emotions as they pass-through various obstacles or processes intended to be executed within the App/Game. When the App Developer (Swift Or Objective-C) records such experiences it enables the App to be more pro-active based on User Experiences to provide additional means to execute the App/Game processes.
+
+Apertain allows such User Experiences to be recorded and then use those specific experience values to further add relevant process flows related to the App/Game.
+
+## 5.1. Recording a Positive User Experience
+Whenever a positive experience occurred (eg., Level Completion in a game or Achieving some Milestone in App) the developer can add this code to record the positive experience gained by the user.
+
+### 5.1.1 Swift Apps Code
+
+	Apertain.logUserXp(viewDelegate: UIViewController, uniqueIdentification: [uniqueEvent], 
+										valueXp: Apertain.PositiveXp)
+	
+	Example: Apertain.logUserXp(viewDelegate: self, uniqueIdentification: "TicketBooked", 
+										valueXp: Apertain.PositiveXp)
+
+### 5.2.2. Objective-C Apps Code
+
+	[Apertain logUserXpWithViewDelegate:UIViewController uniqueIdentification:[uniqueEvent] 
+										valueXp: [Apertain PositiveXp]];
+	
+	Example: [Apertain logUserXpWithViewDelegate:self uniqueIdentification:@"TicketBooked" 
+										valueXp: [Apertain PositiveXp]];
+
+## 5.2. Recording a Negative User Experience
+When a user gets a negative experience (eg., Level Failed or invalid process input) you can add this code to record the negative experience for the user.
+
+### 5.2.1. Swift Apps Code
+
+	Apertain.logUserXp(viewDelegate: UIViewController, uniqueIdentification: [uniqueEvent], 
+										valueXp: Apertain.NegativeXp)
+										
+	Example: Apertain.logUserXp(viewDelegate: self, uniqueIdentification: "LevelFailed", 
+										valueXp: Apertain.NegativeXp)
+										
+###5.2.2. Objective-C Apps Code
+
+	[Apertain logUserXpWithViewDelegate:UIViewController uniqueIdentification: [uniqueEvent] 
+										valueXp: [Apertain NegativeXp]];
+										
+	Example: [Apertain logUserXpWithViewDelegate:self uniqueIdentification:@"LevelFailed
+										valueXp: [Apertain NegativeXp]];
+
+## 5.3. Recording a Neutral Experience
+When a user gets a Neutral experience (neither positive or negative) you can add this code to record the neutral experience for the user.
+	
+### 5.3.1. Swift Apps Code
+
+	Apertain.logUserXp(viewDelegate: UIViewController, uniqueIdentification: [uniueEvent], 
+										valueXp: Apertain.NegativeXp)
+	
+	Example: Apertain.logUserXp(viewDelegate: self, uniqueIdentification: "SkipLevel", 
+										valueXp: Apertain.NeutralXp)
+	
+### 5.3.2. Objective-C Apps Code
+
+	[Apertain logUserXpWithViewDelegate:self uniqueIdentification:[uniueEvent] 
+										valueXp: [Apertain NeutralXp]];
+										
+	Example: [Apertain logUserXpWithViewDelegate:self uniqueIdentification:@"SkipLevel" 
+										valueXp: [Apertain NeutralXp]];

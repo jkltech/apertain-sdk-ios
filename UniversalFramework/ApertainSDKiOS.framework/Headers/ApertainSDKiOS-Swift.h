@@ -134,6 +134,21 @@ SWIFT_CLASS("_TtC14ApertainSDKiOS10APTRateApp")
 @end
 
 
+SWIFT_CLASS("_TtC14ApertainSDKiOS8Apertain")
+@interface Apertain : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull PositiveXp;)
++ (NSString * _Nonnull)PositiveXp;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull NegativeXp;)
++ (NSString * _Nonnull)NegativeXp;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull NeutralXp;)
++ (NSString * _Nonnull)NeutralXp;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
++ (void)logUserXpWithViewDelegate:(UIViewController * _Nonnull)viewDelegate uniqueIdentification:(NSString * _Nonnull)uniqueIdentification valueXp:(NSString * _Nonnull)valueXp;
++ (void)resetUserExperienceWithViewDelegate:(UIViewController * _Nonnull)viewDelegate uniqueIdentifierEvent:(NSString * _Nonnull)uniqueIdentifierEvent;
+- (NSInteger)showRatingFlowIfConditionsAreMetWithViewDelegate:(UIViewController * _Nonnull)viewDelegate eventName:(NSString * _Nonnull)eventName;
+@end
+
+
 SWIFT_CLASS("_TtC14ApertainSDKiOS15ApertainFactory")
 @interface ApertainFactory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -141,6 +156,10 @@ SWIFT_CLASS("_TtC14ApertainSDKiOS15ApertainFactory")
 - (nonnull instancetype)initWithAppUniqueId:(NSString * _Nonnull)appUniqueId userAppSignature:(NSString * _Nonnull)userAppSignature userName:(NSString * _Nonnull)userName userEmail:(NSString * _Nonnull)userEmail OBJC_DESIGNATED_INITIALIZER;
 - (NSString * _Nonnull)setUserDataWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 - (NSString * _Nonnull)getUserDataWithKey:(NSString * _Nonnull)key;
++ (void)setUserNameWithUserName:(NSString * _Nonnull)userName;
++ (NSString * _Nonnull)getUserName;
++ (void)setUserEmailWithUserEmail:(NSString * _Nonnull)userEmail;
++ (NSString * _Nonnull)getUserEmail;
 @end
 
 
