@@ -119,20 +119,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 #endif
 
-#import <ApertainSDKiOS/ApertainSDKiOS.h>
+//#import <ApertainSDKiOS/ApertainSDKiOS.h>
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
-@class UIViewController;
+@class EAGLContext;
 
-SWIFT_CLASS("_TtC14ApertainSDKiOS10APTRateApp")
-@interface APTRateApp : NSObject <UIAlertViewDelegate>
-@property (nonatomic, copy) NSString * _Null_unspecified appId;
+SWIFT_CLASS("_TtC14ApertainSDKiOS15AperatinWrapper")
+@interface AperatinWrapper : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)initRateMyAppWithViewDelegate:(UIViewController * _Nonnull)viewDelegate title:(NSString * _Nonnull)title message:(NSString * _Nonnull)message SWIFT_METHOD_FAMILY(none);
-- (void)startRedirectAppStoreWithViewDelegate:(UIViewController * _Nonnull)viewDelegate title:(NSString * _Nonnull)title message:(NSString * _Nonnull)message;
+- (nonnull instancetype)init:(EAGLContext * _Nonnull)currentContext OBJC_DESIGNATED_INITIALIZER;
+- (void)ApertainInstance:(EAGLContext * _Nonnull)currentContext;
 @end
 
+@class UIViewController;
 
 SWIFT_CLASS("_TtC14ApertainSDKiOS8Apertain")
 @interface Apertain : NSObject
@@ -145,17 +145,20 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)logUserXpWithViewDelegate:(UIViewController * _Nonnull)viewDelegate uniqueIdentification:(NSString * _Nonnull)uniqueIdentification valueXp:(NSString * _Nonnull)valueXp;
 + (void)resetUserExperienceWithViewDelegate:(UIViewController * _Nonnull)viewDelegate uniqueIdentifierEvent:(NSString * _Nonnull)uniqueIdentifierEvent;
-- (NSInteger)showRatingFlowIfConditionsAreMetWithViewDelegate:(UIViewController * _Nonnull)viewDelegate eventName:(NSString * _Nonnull)eventName;
+- (void)showRatingFlowIfConditionsAreMetWithViewDelegate:(UIViewController * _Nonnull)viewDelegate eventName:(NSString * _Nonnull)eventName;
 @end
 
 
 SWIFT_CLASS("_TtC14ApertainSDKiOS15ApertainFactory")
 @interface ApertainFactory : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)reachabilityCheck;
-- (nonnull instancetype)initWithAppUniqueId:(NSString * _Nonnull)appUniqueId userAppSignature:(NSString * _Nonnull)userAppSignature userName:(NSString * _Nonnull)userName userEmail:(NSString * _Nonnull)userEmail OBJC_DESIGNATED_INITIALIZER;
-- (NSString * _Nonnull)setUserDataWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
-- (NSString * _Nonnull)getUserDataWithKey:(NSString * _Nonnull)key;
++ (void)init:(UIViewController * _Nonnull)currentContext :(NSString * _Nonnull)appUniqueId :(NSString * _Nonnull)userAppSignature SWIFT_METHOD_FAMILY(none);
++ (void)showApertainConversationChatter:(UIViewController * _Nonnull)currentContext :(NSString * _Nonnull)title;
++ (void)showRatingFlowIfConditionsAreMet:(UIViewController * _Nonnull)currentContext :(NSString * _Nonnull)eventName;
++ (void)showRatingPrompt:(UIViewController * _Nonnull)currentContext;
++ (void)showFeedbackPrompt:(UIViewController * _Nonnull)currentContext;
++ (NSString * _Nonnull)setUserDataWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
++ (NSString * _Nonnull)getUserDataWithKey:(NSString * _Nonnull)key;
 + (void)setUserNameWithUserName:(NSString * _Nonnull)userName;
 + (NSString * _Nonnull)getUserName;
 + (void)setUserEmailWithUserEmail:(NSString * _Nonnull)userEmail;
@@ -163,20 +166,8 @@ SWIFT_CLASS("_TtC14ApertainSDKiOS15ApertainFactory")
 @end
 
 
-@interface FMDatabase (SWIFT_EXTENSION(ApertainSDKiOS))
-@end
-
-@class NSBundle;
-@class NSCoder;
-
-SWIFT_CLASS("_TtC14ApertainSDKiOS15InAppController")
-@interface InAppController : UIViewController
-- (void)viewDidLoad;
-- (void)launchChatControllerWithSelfView:(UIViewController * _Nonnull)selfView title:(NSString * _Nonnull)title;
-- (void)showFeedbackAlertWithViewDelegate:(UIViewController * _Nonnull)viewDelegate title:(NSString * _Nonnull)title message:(NSString * _Nonnull)message;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
+//@interface FMDatabase (SWIFT_EXTENSION(ApertainSDKiOS))
+//@end
 
 
 SWIFT_CLASS("_TtC14ApertainSDKiOS12MySwiftClass")

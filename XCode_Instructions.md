@@ -46,11 +46,11 @@ Change Project Build Settings -> Build options -> Always embed Swift Standard Li
 
 ![Image of Adding APertain SDK iOS Embed Swift Standard Objective-C App Project](./images/EmbedBuildOption-ObjC.png)
 
-![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/DragAndDrop-ObjC.png)
+<>![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/DragAndDrop-ObjC.png)
 
-![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/EmbeddedBinaries-ObjC.png)
+<>![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/EmbeddedBinaries-ObjC.png)
 
-![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/IfNeedCopy-ObjC.png)
+<>![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/IfNeedCopy-ObjC.png)
 
-![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/FinalStage-ObjC.png)
+<>![Image of Adding APertain SDK iOS Final XCode Objective-C App Project](./images/FinalStage-ObjC.png)
 
