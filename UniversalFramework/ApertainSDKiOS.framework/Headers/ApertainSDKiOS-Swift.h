@@ -123,15 +123,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
-@class EAGLContext;
-
-SWIFT_CLASS("_TtC14ApertainSDKiOS15AperatinWrapper")
-@interface AperatinWrapper : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init:(EAGLContext * _Nonnull)currentContext OBJC_DESIGNATED_INITIALIZER;
-- (void)ApertainInstance:(EAGLContext * _Nonnull)currentContext;
-@end
-
 @class UIViewController;
 
 SWIFT_CLASS("_TtC14ApertainSDKiOS8Apertain")
