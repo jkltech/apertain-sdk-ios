@@ -18,11 +18,16 @@ Getting Started
 
 To integrate APertain SDK with the iOS App, the following changes are needed in the Information Property Plist (Info.plist).
 
+The following element is configured with rate our App that will redirect to app store (itunes.apple.com). If your already published an App on itunes.apple.com (App Store), App will have or generate some unique ID. Use that ID here.
+
 	<key>AppID</key>
     <string>20171502001</string>
 
 Optional:
-    
+
+ Following info.plist property having default title string, else have to customize or provide what you want edit your info.plist. Add these following element on your info.plist.
+ Important note key(s) variable should same on your info.plist.
+ 
     <key>DefaultFeedbackTitle</key>
     <string>Give Your Valuable Feedback</string>
     
@@ -162,7 +167,7 @@ When a user gets a negative experience (eg., Level Failed or invalid process inp
 	[Apertain logUserXpWithViewDelegate:UIViewController uniqueIdentification: [uniqueEvent] 
 										valueXp: [Apertain NegativeXp]];
 										
-	Example: [Apertain logUserXpWithViewDelegate:self uniqueIdentification:@"LevelFailed
+	Example: [Apertain logUserXpWithViewDelegate:self uniqueIdentification:@"LevelFailed"
 										valueXp: [Apertain NegativeXp]];
 
 ## 6.3. Recording a Neutral Experience
@@ -223,4 +228,63 @@ If you would like to add more user information like User Name, User E-Mail and O
     NSString *email = [ApertainFactory getUserEmail];
     
     NSString *userData = [ApertainFactory getUserDataWithKey:myKey];
+    
+### 8. Customer On-Boarding UI
+
+All Applications need a relevant on-boarding User Interface to explain What the App is about and How to use the App. Customer on-boarding is nothing but an inituitive way to introduce the App’s premise to the end users. This interface is your chance to inform, to inspire, and to get the user excited about using your App. This is one of the commonly used aspects of "User Experience" (UX) design, but is often overlooked by the App Developer.
+
+The Customer On-Boarding UI will be used as a self explanatory introduction to your application. A(P)ertain provides a powerful On-Boarding UI which is completely customizable. All you have to do is to decide how many Screens needed for the app intro and choose of Images, Title Text, Description and Background color for each Screen respectively.
+
+## 8.1. APertain OnBoardingUI has four arguments:
+  
+  1. String Array of resource that look for images on each page (Landscape and Porttrait)
+  2. String Array of resource that look for title on each page.
+  3. String Array of resource that look for background color on each page.
+  
+The array size determines the number of Screens in the APertain On-Boarding UI. For example the array for each argument is four, you will get four Screens.
+
+## 8.2. To get the A(P)ertain Customer On-Boarding UI use the following code snippet:
+
+You can use your Info.pList to add following  array element in your app,
+	
+	<key>landscapeImagesArray</key>
+	<array>
+		<string>rating_prompt_screen_land.jpg</string>
+		<string>feedback_prompt_screen_land.jpg</string>
+		<string>inapp_support_screen_land.jpg</string>
+	</array>
+	
+	<key>onboardingBgColors</key>
+	<array>
+		<string>#42b9f4</string>
+		<string>#d676db</string>
+		<string>#93db76</string>
+	</array>
+	
+	<key>onboardingTitles</key>
+	<array>
+		<string>Smart Rating Prompts</string>
+		<string>InApp Feedback Prompts</string>
+		<string>InApp Support View</string>
+	</array>
+	
+	<key>portraitImagesArray</key>
+	<array>
+		<string>rating_prompt_screen.jpg</string>
+		<string>feedback_prompt_screen.jpg</string>
+		<string>inapp_support_screen.jpg</string>
+	</array>
+
+Then you can call following interface and populate your more customisable Apertain Customer On-Boarding.
+
+Note: Add same name against the landscape and porttrait images on your project image set.
+
+Swift Code:
+
+	ApertainFactory.showUserOnboarding(self);
+	
+Objective-C Code 
+
+	[ApertainFactory showUserOnboarding:self];
+
     

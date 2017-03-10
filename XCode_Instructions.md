@@ -34,7 +34,7 @@ Just do import your App class for Swift
 
 	import ApertainSDKiOS
 
-For Objective-C you can import 
+For Objective-C import on your header file 
 
 	#import <ApertainSDKiOS/ApertainSDKiOS.h>
 
